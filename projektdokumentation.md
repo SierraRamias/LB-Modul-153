@@ -14,16 +14,16 @@
 
 # 0 Ihr Projekt
 
-✍️ Beschreiben Sie Ihr Projekt in einem griffigen Satz.
+Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dabei dreht ein Spieler das Glücksrad um dann um einen Betrag spielen zu können. Der Spieler muss dann einen Buchstabe der Wortes welches erraten werden muss raten, und kriegt den gedrehten Betrag mal die anzahl der vorkommen des Buchstabe zugeschrieben. Ist der Buchstabe nicht vorhanden, ist der nächste Spieler drann. Wenn ein Spieler das Wort erratet, kann dieser mit seinem zugeschriebenen Betrag etwas aus dem Preisshop kaufen.
 
 # 1 Analyse
 
 ✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
 
-* Tier 1 (Presentation): ...
-* Tier 2 (Webserver):
-* Tier 3 (Application Server):
-* Tier 4 (Dataserver):
+* Tier 1 (Presentation): HTML
+* Tier 2 (Webserver):JSF
+* Tier 3 (Application Server):Java
+* Tier 4 (Dataserver):MariaDB
 
 # 2 Technologie
 
@@ -41,9 +41,12 @@
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
-| 1    |                 |      | Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️ |
-| ...  |                 |      |                                    |
-
+| 1    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Glücksrad drehen können um, um einen Betrag spielen zu können |
+| 2    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können um, Beträge zugeschrieben zu bekommen |
+| 3    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Wort raten können um, um meinen Betrag gewinnen zu können |
+| 4    |     Muss        |   Qualitative  | Als ein Spieler möchte ich dass der nächste dran kommt mit raten wenn der spielende den Falschen Buchstabe/Wort ratet damit, ich auch dran komme, wenn ich nicht als erstes dran bin |
+| 5    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können um, Beträge zugeschrieben zu bekommen |
+<
 ✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
 
 # 4.2 Testfälle
