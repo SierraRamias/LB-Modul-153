@@ -20,10 +20,10 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 
 ✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
 
-* Tier 1 (Presentation): HTML
-* Tier 2 (Webserver):JSF
-* Tier 3 (Application Server):Java
-* Tier 4 (Dataserver):MariaDB
+* Tier 1 (Presentation): Facelets
+* Tier 2 (Webserver):Backing Bean
+* Tier 3 (Application Server):EJB
+* Tier 4 (Dataserver):JPA EntityManager
 
 # 2 Technologie
 
