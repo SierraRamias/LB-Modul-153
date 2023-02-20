@@ -4,7 +4,7 @@ Sierra
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
+|       | 0.0.1   |                                                              |
 |       | 0.0.2   |                                                              |
 |       | 0.0.3   |                                                              |
 |       | 0.0.4   |                                                              |
@@ -41,11 +41,12 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
-| 1    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Glücksrad drehen können um, um einen Betrag spielen zu können |
-| 2    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können um, Beträge zugeschrieben zu bekommen |
-| 3    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Wort raten können um, um meinen Betrag gewinnen zu können |
-| 4    |     Muss        |   Qualitative  | Als ein Spieler möchte ich dass der nächste dran kommt mit raten wenn der spielende den Falschen Buchstabe/Wort ratet damit, ich auch dran komme, wenn ich nicht als erstes dran bin |
+| 1    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Glücksrad drehen können, um um einen Betrag spielen zu können |
+| 2    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können, um Beträge zugeschrieben zu bekommen |
+| 3    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Wort raten können, um um meinen Betrag gewinnen zu können |
+| 4    |     Muss        |   Qualitative  | Als ein Spieler möchte ich dass der nächste dran kommt mit raten wenn der spielende den Falschen Buchstabe/Wort ratet, damit ich auch dran komme, wenn ich nicht als erstes dran bin |
 | 5    |     Kann        |   Rand         | Als ein Spieler möchte ich das Rad drehen sehen damit das drehen des Rades Spannung aufbaut |
+| 6    |     Kann        |   Rand         | Als Admin möchte ich die Spielstände aller benutzer sehen können, damit ich den Status des Spieles beurteilen kann|
 <
 ✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
 
@@ -54,7 +55,11 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 | TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
 | 1.1  |              |         |                   |
-| ...  |              |         |                   |
+| 2.1  |              |         |                   |
+| 3.1  |              |         |                   |
+| 4.1  |              |         |                   |
+| 5.1  |              |         |                   |
+| 6.1  |              |         |                   |
 
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
