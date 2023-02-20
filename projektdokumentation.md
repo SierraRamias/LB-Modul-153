@@ -54,8 +54,8 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 
 | TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| 2.1  |              |         |                   |
+| 1.1  |  Das Spiel muss gestartet sein und der Tester ist auf der Glücksrad Seite   | Man drückt auf "Rad drehen" |  Das Rad dreht sich und man sieht mit welchen Betrag man spielt |
+| 2.1  |  Das Spiel ist gestartet   |         |                   |
 | 3.1  |              |         |                   |
 | 4.1  |              |         |                   |
 | 5.1  |              |         |                   |
