@@ -17,17 +17,17 @@ Sierra
 Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dabei dreht ein Spieler das Glücksrad um dann um einen Betrag spielen zu können. Der Spieler muss dann einen Buchstabe der Wortes welches erraten werden muss raten, und kriegt den gedrehten Betrag mal die anzahl der vorkommen des Buchstabe zugeschrieben. Ist der Buchstabe nicht vorhanden, ist der nächste Spieler drann. Wenn ein Spieler das Wort erratet, kann dieser mit seinem zugeschriebenen Betrag etwas aus dem Preisshop kaufen.
 
 # 1 Analyse
+* Tier 1 (Presentation): HTML
+* Tier 2 (Webserver):Seuerung des Programmablaufs
+* Tier 3 (Application Server):Abrufen und abspeichern der Daten
+* Tier 4 (Dataserver):MAria DB Datenbanken
 
-✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
+# 2 Technologie
 
 * Tier 1 (Presentation): Facelets
 * Tier 2 (Webserver):Backing Bean
 * Tier 3 (Application Server):EJB
-* Tier 4 (Dataserver):JPA EntityManager
-
-# 2 Technologie
-
-✍️ Beschreiben Sie für dieselben Tiers, welche Programmiersprache bzw. Technologie Sie verwenden möchten.
+* Tier 4 (Dataserver):JPA EntityManager/JCBA
 
 # 3 Datenbank
 
@@ -45,7 +45,7 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 | 2    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können um, Beträge zugeschrieben zu bekommen |
 | 3    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Wort raten können um, um meinen Betrag gewinnen zu können |
 | 4    |     Muss        |   Qualitative  | Als ein Spieler möchte ich dass der nächste dran kommt mit raten wenn der spielende den Falschen Buchstabe/Wort ratet damit, ich auch dran komme, wenn ich nicht als erstes dran bin |
-| 5    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können um, Beträge zugeschrieben zu bekommen |
+| 5    |     Kann        |   Rand         | Als ein Spieler möchte ich das Rad drehen sehen damit das drehen des Rades Spannung aufbaut |
 <
 ✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
 
