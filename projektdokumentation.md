@@ -88,11 +88,11 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 
 # 5 Prototyp
 Admin Seite
-![game site](https://user-images.githubusercontent.com/40291776/221521702-9157652e-a6fa-46c8-be41-f5388f1fe269.png)
-
+![adminsite](https://user-images.githubusercontent.com/40291776/221521835-4138b5bb-6db3-472c-8056-896f94af8baa.png)
 
 Game Seite
-![Alt text](file:///game%20site.png)
+![game site](https://user-images.githubusercontent.com/40291776/221521702-9157652e-a6fa-46c8-be41-f5388f1fe269.png)
+
 # 6 Implementation
 
 
