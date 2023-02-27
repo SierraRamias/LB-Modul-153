@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Game</title>
+        <h:outputStylesheet name="css/game.css"/>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p>
+                <h:outputText value="#{gameBean.displayName() }"/>
+            </p>
+            <h2>Guess the Sentence</h2>
+            <p>
+                <h:outputText value="#{gameBean.getHiddenSentence() }"/>
+            </p>
+            <h:inputText value="#{gameBean.guess}" />
+            <h:commandButton value="Guess" action="#{gameBean.checkGuess}" />
+            <p>
+                <h:outputText value="#{gameBean.message}" />
+            </p>
+            <h2>Bet for your Life</h2>
+            <p>
+                <h:outputText value="Bet Amount: " />
+                <h:inputText value="#{gameBean.betAmount}" />
+                <h:outputText value="#{gameBean.wonAmount}" />
+            </p>
+            <h2>Spin the Wheel</h2>
+            <p>
+                <h:outputText value="your Amount is:" />
+                <h:outputText value="#{gameBean.amount}"/>
+            </p>
+            <h:commandButton value="spin The wheel" action="#{gameBean.spinWheel}" />
+            <p>
+                <h:outputText value="#{gameBean.result}" />
+            </p>
+            <p>
+                <h:outputText value="your Amount of Lifes are:" />
+                <h:outputText value="#{gameBean.life}" />
+            </p>
+            <p>
+            <h:commandButton value="submit to Highscore" action="#{gameBean.submitHighscore}" />
+            </p>
+        </h:form>
+
+    </h:body>
+
+</html>

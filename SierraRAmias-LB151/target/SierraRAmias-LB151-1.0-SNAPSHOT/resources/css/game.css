@@ -1,0 +1,83 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20.02.2023, 11:17:07
+    Author     : nutze
+*/
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f2f2f2;
+}
+
+h2 {
+   margin-top: 30px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+form {
+   margin: 0 auto;
+   max-width: 600px;
+   background-color: #fff;
+   border: 1px solid #ccc;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+p {
+   margin-bottom: 10px;
+}
+
+input[type="text"] {
+   padding: 5px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+button[type="submit"] {
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+   background-color: #3e8e41;
+}
+
+.hidden {
+   font-size: 24px;
+   font-weight: bold;
+   letter-spacing: 10px;
+   text-align: center;
+}
+
+.hidden span {
+   display: inline-block;
+   border-bottom: 2px solid #333;
+   padding-bottom: 5px;
+}
+
+.message {
+   text-align: center;
+   font-size: 16px;
+   font-weight: bold;
+   margin-top: 10px;
+}
+
+.hidden {
+   font-size: 24px;
+   font-weight: bold;
+   letter-spacing: 20px;
+   text-align: center;
+}
