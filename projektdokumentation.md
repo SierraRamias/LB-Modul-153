@@ -310,12 +310,32 @@ public void submitHighscore() throws NamingException {
 
 # 8 Testprotokoll
 
-✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xtOMZitAsH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
 | 1.1  |       |          |        |
-| ...  |       |          |        |
+| 2.1  |  Man ist auf der Adminseite  |    Man drückt bei einer Phrase auf Phrase editieren, editiert diese und drückt dann Enter |   Die Phrase ist in editierter Version da  |
+| 2.2  |  Man ist auf der Adminseite  |    Man drückt bei einer Phrase auf Phrase Löschen|   Die Phrase ist gelöscht und wird nicht mehr angezeigt|
+| 2.3  |  Man ist auf der Adminseite  |    Man drückt bei einer Phrase auf Phrase hinzufügen, gibt diese ein und drückt enter |   Die Phrase wird nun angezeigt  |
+| 3.1  |  Man ist auf der Adminseite   |  Man gibt bei Kategorie eine Kategorie ein und drückt Kategorie hinzufügen  |  die neue Kategorie wird nun angezeigt  |
+| 3.2  |Man ist auf der Adminseite   |  Man drückt bei den Phrasen auf zu Kategorie hinzufügen | Bei der Phrase steht nun das es zu dieser Kategorie gehört  |
+| 4.1  | Man ist auf der Adminseite  |    Man drückt bei einer Highscore auf Highscore Löschen|   Der Highscore ist gelöscht und wird nicht mehr angezeigt|
+| 5.1  | Das Spiel ist gestarte |  Siehe vo das spiel gestartet ist | Es ist auf einem Webbrowser gestartet |
+| 6.1  | Man hat sich als Benutzer eingeloggt und ist auf der Namenseingabe Seite | Man gibt einen Namen ein und drückt auf submit | Der Name wird nun beim Begrüssungtext auf der Spielseite angezeigt |
+| 7.1  | Man ist auf der Spielseite | Man spiel ein paar rundenen | Der Betrag wird die ganze zeit aktualisiert und unter "Your amount is:" |
+| 8.1  | Man ist auf der Spielseite | Man spiel ein paar runden, wobei man da mindestens einmal falsch beim ratespiel raten muss | Der Betrag wird die ganze zeit aktualisiert und unter "Your amount of lifes are:" |
+| 9.1  | Man ist auf der Spielseite | Man spiel ein paar runden, wobei man da mindestens einmal falsch beim ratespiel raten muss und einmal richtig | Es wird angezeigt ob es richtig oder falsch ist |
+| 10.1  | Man ist auf der Highscoreseite | Man schaut welche angaben zu den Score angezeigt werden | Es soll der name die anzahl Versüche, den Betrag und den Zeitpunkt der Spieles angezeigt werden |
+| 11.1  | Man ist auf der Highscoreseite | Man schaut wie die Highscoreliste Sortiert ist | Es soll dem Betrag aufsteigen sortiert sein |
+| 12.1  | Man ist auf der Spielseite | Man errät die Phrasen mindestens einmal | Es kommt eine andere Phrase |
+| 13.1  | Man ist auf der Spielseite | Man Schaut welche auswahl man hat an buttons | Es gibt Buttons die einem ermöglichen zu spielen, und es gibt Buttons um den Highscore einzutragen und aufhören zu spielen |
+| 14.1  | Man ist auf der Spielseite | Man errät die Phrase mindesten einmal | Nachdem man die Phrase erraten hat, kommt eine andere |
+| 15.1  | Man ist auf der Spielseite | Man Spielt ein paar rundenen und submitten dann seinen Highscore | Auf der Highscoreliste sind die Anzahl an Versüche angezeigt  |
+| 16.1  | Man ist auf der Spielseite | Man gibt beim raten etwas anderes als nur einen buchstaben ein | Es gibt eine Fehlermeldung und man muss noch einmal raten  |
+| 17.1  | Man hat zugriff auf den Quellcode | Man Schaut sich den JDBCScoreDao an | Der JDBCScoreDao wurde im JDBC format programmiert |
+| 18.1  | Man hat zugriff auf den Quellcode | Man Schaut sich den wie die Seite auf die Datenbank zugreifft an | Die Methode die von der Webseite aufgerufen wird greift nicht direkt auf die Datenbank ein, sondern ruft eine Methode im JDBCScoreDao auf |
+| 19.1  | Man hat zugriff auf den Quellcode | Man schaut beim Gamestart.xhtml | Beim Inputtext für den Namen ist required |
 
 ✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
 
