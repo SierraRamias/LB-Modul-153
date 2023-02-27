@@ -4,14 +4,14 @@ Sierra
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-| 20.022023 | 0.0.1   | Start of Projekt, erstellen des Projektes   |
-| 21.022023 | 0.0.2   | Erstellen der Login Seite  |
-| 22.022023 | 0.0.3   | Erstellen der Seite für das Nameneingeben |
-| 23.022023 | 0.0.4   | Erstellen der SpielSeite, Anfang des Buchstaben raten |
-| 24.022023 | 0.0.5   | Bearbeitung des Buchstabenrate("-" wurde nicht mit dem Geratenen Buchstaben ersetzt)  |
-| 25.022023 | 0.0.6   | Erweiterung am Spiel, Glücksrad wurde hinzugefügt, man kann jetzt um einen Betrag Spielen  |
-| 26.022023 | 1.0.0   | Erweiterung am Spiel:Man kann jetzt einen Betrag setzen, um den man beim raten spielt, und es wurden Leben hinzugefügt  |
-| 26.022023 | 1.0.1   | Highscore Datenbank wurde hinzugefügt  |
+| 20.02.2023 | 0.0.1   | Start of Projekt, erstellen des Projektes   |
+| 21.02.2023 | 0.0.2   | Erstellen der Login Seite  |
+| 22.02.2023 | 0.0.3   | Erstellen der Seite für das Nameneingeben |
+| 23.02.2023 | 0.0.4   | Erstellen der SpielSeite, Anfang des Buchstaben raten |
+| 24.02.2023 | 0.0.5   | Bearbeitung des Buchstabenrate("-" wurde nicht mit dem Geratenen Buchstaben ersetzt)  |
+| 25.02.2023 | 0.0.6   | Erweiterung am Spiel, Glücksrad wurde hinzugefügt, man kann jetzt um einen Betrag Spielen  |
+| 26.02.2023 | 1.0.0   | Erweiterung am Spiel:Man kann jetzt einen Betrag setzen, um den man beim raten spielt, und es wurden Leben hinzugefügt  |
+| 26.02.2023 | 1.0.1   | Highscore Datenbank wurde hinzugefügt  |
 
 # 0 Ihr Projekt
 
@@ -98,14 +98,164 @@ Game Seite
 
 | User Story | Datum | Beschreibung |
 | ---------- | ----- | ------------ |
-| ...        |       |              |
+| 1       | 20.02.2023  | Ich habe gemacht, dass man ein Admin Login braucht um auf die Admin seite zu kommen  |
+| 5       | 20.02.2023  | Ich habe das Projekt als ein JSF projekt gemacht, was das Projekt auf dem Webbroswer erhältlich macht  |
+| 6       | 20.02.2023  | ich habe eine Seite erstellt wo man seinen Namen eingeben kann  |
+| 7       | 25.02.2023  | Ich habe dem User einen Amount gegeben, dieser wird dann beim Spiel kleiner oder grösser, was immer angezeigt wird |
+| 8       | 26.02.2023  | Ich habe drei Leben zum Spiel hinzugefügt, die bei jedem Mal falsch raten je ein leben abgezogen werden, und wenn diese auf 0 sind wird der Spieler auf die Startseite gebracht  |
+| 9       | 25.02.2023  | Beim Erstellen der Ratespieles, habe ich gemacht, dass wenn der geratene Buchstabe nicht vorkommt steht das dies falsch wahr, sonst richtig |
+| 10      | 26.02.2023  | Beim Erstellen des JDBCScoreDao habe ich gemacht, dass wenn ein Eintrag gemacht werden muss, dass dann alle Daten den User sowie das Aktuelle Datum eingesetzt werden |
+| 11      | 26.02.2023  | Auf der Highscoreseite, habe ich die Methode getHighscore gemacht, die die Scores sortiert nach Amount  |
+| 13      | 26.02.2023  | Ich habe einen submit Highscore button hinzugefügt, der den Highscore in die Datenbank eingibt und den Benutzer auf die Startseite bringt |
+| 14      | 24.02.2023  | Ich habe die liste mit den Wörter mit 4 Phrasen gefüllt, dies sind genug um es für den anfang spielbar zu machen  |
+| 15      | 25.02.2023  | Ich habe bei der Wheelspin methode hinzugefügt, das bei jedem Mal spinnnen der count für Tries beim User raufgeht  |
+| 17      | 26.02.2023  | Ich habe JDBC beim erstellen der Highscore Datenbank benutzt  |
+| 18      | 26.02.2023  | Die Datenbank habe ich nur per dem Dao zugreifbar gemacht, die Seite selber ruft nur eine Methode auf, die eine Methode vom Dao aufruft |
+| 19      | 24.02.2023  | Ich habe beim eingeben des Namens ein Required hinzugefügt  |
+
 
 # 7 Projektdokumentation
 
 | US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
 | ---- | --------- | ----------------------------------------- |
-| 1    | ja / nein |                                           |
-| ...  |           |                                           |
+| 1    | ja  |    if (username.equals("admin") && password.equals("adminpassword")) {
+            session.setAttribute("isAdmin", true);
+            return "/AdminSite.xhtml";
+        } else {
+            FacesMessage message = new FacesMessage("Invalid credentials.");
+            context.addMessage(null, message);
+            return null;
+        }                                       |
+| 2    | nein |                                           |
+| 3    | nein |                                           |
+| 4    | nein |                                           |
+| 5    | ja  | <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>                                       |
+| 6    | ja |   public String submit() {
+        user = new User(name);
+    return "Game.xhtml?faces-redirect=true";
+    }                                        |
+| 7    | ja  |  public int getAmount() {
+        return user.getAmount();
+    }                                         |
+| 8    | ja |     public int getLife() {
+        return life;
+    }
+    public void loseLife() {
+        life--;
+        if (life <= 0) {
+            FacesContext facesContext = FacesContext.getCurrentInstance();
+            ExternalContext externalContext = facesContext.getExternalContext();
+            try {
+                externalContext.redirect("Login.xhtml");
+            } catch (IOException e) {
+                // Handle the exception
+            }
+        }
+
+    }                                      |
+| 9    | ja |       if (found) {
+                message = "Good guess!";
+            } else {
+                loseLife();
+                message = "Sorry, try again.";
+            }
+        } else {
+            message = "Please enter a single letter.";
+        }                                    |
+| 11   | ja  |     Score score = new Score(name, amount, tries, date);                                      |
+| 12   | nein |                                           |
+| 13   | ja |        public void submitHighscore() throws NamingException {
+
+        // create an instance of the JdbcScoreDao class
+        JdbcScoreDao scoreDao = new JdbcScoreDao(MyDataSourceFactory.getDataSource());
+
+        // create a new Score object with the given information
+        Date currentDate = new Date();
+        Score score = new Score(user.getName(), user.getAmount(), user.getTries(), currentDate);
+
+        // add the score to the database using the JdbcScoreDao
+        scoreDao.addScore(score);
+
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        ExternalContext externalContext = facesContext.getExternalContext();
+        try {
+            externalContext.redirect("Login.xhtml");
+        } catch (IOException e) {
+            // Handle the exception
+        }
+    }                                   |
+| 14   | ja  |    String[] sentences = {
+            "an apple a day keeps the doctor away",
+            "good things come to those who wait",
+            "better late than never",
+            "a blessing in disguise"
+        };                                       |
+| 15   | ja  |        public void spinWheel() {
+        user.addTries();                                   |
+| 16   | nein |                                           |
+| 17   | ja  |    public JdbcScoreDao(DataSource dataSource) {
+    this.dataSource = dataSource;
+  }
+  @Override
+  public void addScore(Score score) {
+    try (Connection conn = dataSource.getConnection()) {
+      String sql = "INSERT INTO scoreliste (name, amount, tries, date) VALUES (?, ?, ?, ?)";
+      try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setString(1, score.getName());
+        stmt.setInt(2, score.getAmount());
+        stmt.setInt(3, score.getTries());
+        stmt.setDate(4, new java.sql.Date(score.getDate().getTime()));
+        stmt.executeUpdate();
+      }
+    } catch (SQLException e) {
+      // handle exception
+    }
+  }
+
+  @Override
+  public List<Score> getHighscores() {
+    List<Score> highscores = new ArrayList<>();
+    try (Connection conn = dataSource.getConnection()) {
+      String sql = "SELECT name, amount, tries, date FROM scoreliste ORDER BY amount DESC";
+      try (Statement stmt = conn.createStatement()) {
+        try (ResultSet rs = stmt.executeQuery(sql)) {
+          while (rs.next()) {
+            String name = rs.getString("name");
+            int amount = rs.getInt("amount");
+            int tries = rs.getInt("tries");
+            Date date = rs.getDate("date");
+            Score score = new Score(name, amount, tries, date);
+            highscores.add(score);
+          }
+        }
+      }
+    } catch (SQLException e) {
+      // handle exception
+    }
+    return highscores;
+  }                                       |
+| 18   | ja  |     public void submitHighscore() throws NamingException {
+
+        // create an instance of the JdbcScoreDao class
+        JdbcScoreDao scoreDao = new JdbcScoreDao(MyDataSourceFactory.getDataSource());
+
+        // create a new Score object with the given information
+        Date currentDate = new Date();
+        Score score = new Score(user.getName(), user.getAmount(), user.getTries(), currentDate);
+
+        // add the score to the database using the JdbcScoreDao
+        scoreDao.addScore(score);
+
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        ExternalContext externalContext = facesContext.getExternalContext();
+        try {
+            externalContext.redirect("Login.xhtml");
+        } catch (IOException e) {
+            // Handle the exception
+        }
+    }                                      |
+| 19   | ja  |                  <h:inputText id="name" value="#{gameBean.name}" required ="true" />
+                                  |
 
 # 8 Testprotokoll
 
