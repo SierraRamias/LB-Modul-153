@@ -4,17 +4,18 @@ Sierra
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   |                                                              |
-|       | 0.0.2   |                                                              |
-|       | 0.0.3   |                                                              |
-|       | 0.0.4   |                                                              |
-|       | 0.0.5   |                                                              |
-|       | 0.0.6   |                                                              |
-|       | 1.0.0   |                                                              |
+| 20.022023 | 0.0.1   | Start of Projekt, erstellen des Projektes   |
+| 21.022023 | 0.0.2   | Erstellen der Login Seite  |
+| 22.022023 | 0.0.3   | Erstellen der Seite für das Nameneingeben |
+| 23.022023 | 0.0.4   | Erstellen der SpielSeite, Anfang des Buchstaben raten |
+| 24.022023 | 0.0.5   | Bearbeitung des Buchstabenrate("-" wurde nicht mit dem Geratenen Buchstaben ersetzt)  |
+| 25.022023 | 0.0.6   | Erweiterung am Spiel, Glücksrad wurde hinzugefügt, man kann jetzt um einen Betrag Spielen  |
+| 26.022023 | 1.0.0   | Erweiterung am Spiel:Man kann jetzt einen Betrag setzen, um den man beim raten spielt, und es wurden Leben hinzugefügt  |
+| 26.022023 | 1.0.1   | Highscore Datenbank wurde hinzugefügt  |
 
 # 0 Ihr Projekt
 
-Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dabei dreht ein Spieler das Glücksrad um dann um einen Betrag spielen zu können. Der Spieler muss dann einen Buchstabe der Wortes welches erraten werden muss raten, und kriegt den gedrehten Betrag mal die anzahl der vorkommen des Buchstabe zugeschrieben. Ist der Buchstabe nicht vorhanden, ist der nächste Spieler drann. Wenn ein Spieler das Wort erratet, kann dieser mit seinem zugeschriebenen Betrag etwas aus dem Preisshop kaufen.
+Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dabei kann der Spieler zuerste seinen Namen eingeben, der danach in der Highscoreliste angezeigt wird. Danach kann der Spieler am Glücksrad drehen, und jenachdem einen Betrag gewinnen, danach kann der Spieler um diesen Betrag spielen beim erraten von Buchstaben beim beim ratespiel. je nachdem wie oft der Buchstabe vorkommt, und wieviel man gewettet hat, gewinnt man mehr oder weniger. hat man irgendwann genug, kann man seinen Betrag in die Highscoreliste einschreiben lassen. Diese Highscoreliste, kann man dann von der Startseite aus zugreiffen. Als Admin kann man dann noch dazu Leute aus der Highscorelsite rausstreichen und neue Phrasen und Kategorien für das Ratespiel hinzufügen. 
 
 # 1 Analyse
 * Tier 1 (Presentation): HTML
@@ -31,13 +32,9 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 
 # 3 Datenbank
 
-✍️ Wie steuern Sie Ihre Datenbank an? Wie ist das Interface aufgebaut? 
+Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 
 # 4.1 User Stories
-
-✍️ Formulieren Sie klare Anforderungen in der Form von User Stories (*„als … möchte ich … damit …“*) und zu jeder Anforderung mindestens einen dazugehörigen Testfall (in Kapitel 4.2). 
-
-✍️ Formulieren Sie weitere, eigene Anforderungen und Testfälle, wie Sie Ihre Applikation erweitern möchten. Geben Sie diesen statt einer Nummer einen Buchstaben (`A`, `B`, etc.)
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
@@ -48,7 +45,6 @@ Das Projekt ist eine Simple Version von Glücksrad eine TV Sendung der 90er. Dab
 | 5    |     Kann        |   Rand         | Als ein Spieler möchte ich das Rad drehen sehen damit das drehen des Rades Spannung aufbaut |
 | 6    |     Kann        |   Rand         | Als Admin möchte ich die Spielstände aller benutzer sehen können, damit ich den Status des Spieles beurteilen kann|
 <
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
 
 # 4.2 Testfälle
 
