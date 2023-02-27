@@ -38,12 +38,12 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
-| 1    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Glücksrad drehen können, um um einen Betrag spielen zu können |
-| 2    |     Muss        |   Funktional   | Als ein Spieler möchte ich Buchstaben raten können, um Beträge zugeschrieben zu bekommen |
-| 3    |     Muss        |   Funktional   | Als ein Spieler möchte ich das Wort raten können, um um meinen Betrag gewinnen zu können |
-| 4    |     Muss        |   Qualitative  | Als ein Spieler möchte ich dass der nächste dran kommt mit raten wenn der spielende den Falschen Buchstabe/Wort ratet, damit ich auch dran komme, wenn ich nicht als erstes dran bin |
-| 5    |     Kann        |   Rand         | Als ein Spieler möchte ich das Rad drehen sehen damit das drehen des Rades Spannung aufbaut |
-| 6    |     Kann        |   Rand         | Als Admin möchte ich die Spielstände aller benutzer sehen können, damit ich den Status des Spieles beurteilen kann|
+| 1    |     Muss        |   Funktional   | Als Admin möchte ich mit meinem Benutzernamen und Passwort auf meine Eigene Adminseite kommeen, damit nicht User zugriff auf Adminrechte haben |
+| 2    |     Muss        |   Funktional   | Als Admin möchte ich Phrasen anlegen, ändern und löschen können, damit ich das spiel auch im nachhinein erweitern kann |
+| 3    |     Muss        |   Funktional   | Als Admin möchte ich Kategorien anlegen und die Phrasen einer Kategorie zuordnen können, damit ich auch im nachhinein die Phrasen neuen Kategorien zuorden kann |
+| 4    |     Muss        |   Qualitative  | Als Admin möchte ich einzelne Einträge der Highscore-Liste löschen können, damit ich evt. unverdiente Highscores löschen kann |
+| 5    |     Kann        |   Rand         | Als benutzer möchte ich dass das Spiel auf einem Webbrowser ist, damit er einfach zugreifbar ist als Benutzer |
+| 6    |     Kann        |   Rand         | Als Benutzer möchte ich meinen Namen eingeben können, damit er später auf der Highscoreliste angezeigt werden kann |
 <
 
 # 4.2 Testfälle
