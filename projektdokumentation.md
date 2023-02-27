@@ -45,13 +45,13 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 | 5    |     Muss        |   Funktional         | Als benutzer möchte ich dass das Spiel auf einem Webbrowser ist, damit er einfach zugreifbar ist als Benutzer |
 | 6    |     Muss        |   Funktional         | Als Benutzer möchte ich meinen Namen eingeben können, damit er später auf der Highscoreliste angezeigt werden kann |
 | 7    |     Muss        |   Funktional         | Als Benutzer möchte ich zur jeder Zeit meinen Kontostand sehen, damit ich einfacher entscheiden kann, wann ich mich in die Highscoreliste Eintragen lassen möchte |
-| 8    |     Muss        |   Rand         | Als Benutzer möchte ich zu jeder Zeit meine Lebenspunkte sehen können, damit ich weiss wie oft ich noch falsch raten kann  |
-| 9    |     Muss        |   Rand         | Als Benutzer möchte ich dass es mir angezeigt wird ob mein geratener Buchstabe richtig oder falsch ist, damit ich sehen kann ob ich richtig oder falsch war |
+| 8    |     Muss        |   Funktional         | Als Benutzer möchte ich zu jeder Zeit meine Lebenspunkte sehen können, damit ich weiss wie oft ich noch falsch raten kann  |
+| 9    |     Muss        |   Qualitative         | Als Benutzer möchte ich dass es mir angezeigt wird ob mein geratener Buchstabe richtig oder falsch ist, damit ich sehen kann ob ich richtig oder falsch war |
 | 10   |     Muss        |   Funktional         | Als Benutzer möchte ich das auf der Highscoreliste Rang, Name, Zeitpunkt des Spieles, Geldetrag und die Anzahl an spielrunden sind, damit ausführlich angezeigt wird, wie gut man wat |
 | 11   |     Muss        |  Qualitative  | Als Benutzer möchte ich dass die Highscoreliste nach Rang aufsteigend sortiert ist, damit zu sehen ist, wer der Beste war |
 | 12   |     Muss        |  Qualitative | Als Benutzer möchte ich Das Phrasen nur einmal angezeigt werden, damit das Spiel nicht zu einfach wird |
 | 13   |     Muss        |  Qualitative | Als Benutzer möchte ich jederzeit entweder Spielen, oder aufhören und meinen Gewinn in die Highscoreliste übernehmen, damit ich die Wahl zum weiterspielen oder nicht habe |
-| 14   |     Muss        |  Rand         | Als Benutzer möchte ich dass das Spiel mit einer Spielbaren anzahl an Phrasen gefüllt ist  |
+| 14   |     Muss        |  Qualitative         | Als Benutzer möchte ich dass das Spiel mit einer Spielbaren anzahl an Phrasen gefüllt ist  |
 | 15   |     Kann        | Qualitative | Als Benutzer möchte ich dass die Anzahl der Spielrunden gezählt werden, damit dies dann in der Hichscoreliste angezeigt wird  |
 | 16   |     Kann        | Rand         | Als Admin möchte ich das einfach Formulareingaben wie Leere Textfelder auf Client wie auf Serverseite geprüft wird, damit es ein Stück Sicherheit gibt  |
 | 17   |     Kann        | Rand         | Als Admin möchte ich dass als Datenbnank JDBC benutzt wird, damit es so Sachen wie Highscore einfach gespeichert werden können  |
