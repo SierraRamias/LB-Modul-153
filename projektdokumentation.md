@@ -50,13 +50,13 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 | 10   |     Kann        |   Rand         | Als Benutzer möchte ich das auf der Highscoreliste Rang, Name, Zeitpunkt des Spieles, Geldetrag und die Anzahl an spielrunden sind, damit ausführlich angezeigt wird, wie gut man wat |
 | 11   |     Kann        |   Rand         | Als Benutzer möchte ich dass die Highscoreliste nach Rang aufsteigend sortiert ist, damit zu sehen ist, wer der Beste war |
 | 12   |     Kann        |   Rand         | Als Benutzer möchte ich Das Phrasen nur einmal angezeigt werden, damit das Spiel nicht zu einfach wird |
-| 12   |     Kann        |   Rand         | Als Benutzer möchte ich jederzeit entweder Spielen, oder aufhören und meinen Gewinn in die Highscoreliste übernehmen, damit ich die Wahl zum weiterspielen oder nicht habe |
-| 12   |     Kann        |   Rand         | Als Benutzer möchte ich dass das Spiel mit einer Spielbaren anzahl an Phrasen gefüllt ist  |
-| 12   |     Kann        |   Rand         | Als Benutzer möchte ich dass die Anzahl der Spielrunden gezählt werden, damit dies dann in der Hichscoreliste angezeigt wird  |
-| 12   |     Kann        |   Rand         | Als Admin möchte ich das einfach Formulareingaben wie Leere Textfelder auf Client wie auf Serverseite geprüft wird, damit es ein Stück Sicherheit gibt  |
-| 12   |     Kann        |   Rand         | Als Admin möchte ich dass als Datenbnank JDBC benutzt wird, damit es so Sachen wie Highscore einfach gespeichert werden können  |
-| 12   |     Kann        |   Rand         | Als Admin möchte ich dass die Datenbank anbindung möglichst unabhängig vom Tatsächlichen Produkt ist  |
-| 12   |     Kann        |   Rand         | Als Admin möchte ich dass Sicherheits aspekte umgesetzt werden, damit die Seite gegen Hackers geschützt ist|
+| 13   |     Kann        |   Rand         | Als Benutzer möchte ich jederzeit entweder Spielen, oder aufhören und meinen Gewinn in die Highscoreliste übernehmen, damit ich die Wahl zum weiterspielen oder nicht habe |
+| 14   |     Kann        |   Rand         | Als Benutzer möchte ich dass das Spiel mit einer Spielbaren anzahl an Phrasen gefüllt ist  |
+| 15   |     Kann        |   Rand         | Als Benutzer möchte ich dass die Anzahl der Spielrunden gezählt werden, damit dies dann in der Hichscoreliste angezeigt wird  |
+| 16   |     Kann        |   Rand         | Als Admin möchte ich das einfach Formulareingaben wie Leere Textfelder auf Client wie auf Serverseite geprüft wird, damit es ein Stück Sicherheit gibt  |
+| 17   |     Kann        |   Rand         | Als Admin möchte ich dass als Datenbnank JDBC benutzt wird, damit es so Sachen wie Highscore einfach gespeichert werden können  |
+| 18   |     Kann        |   Rand         | Als Admin möchte ich dass die Datenbank anbindung möglichst unabhängig vom Tatsächlichen Produkt ist  |
+| 19   |     Kann        |   Rand         | Als Admin möchte ich dass Sicherheits aspekte umgesetzt werden, damit die Seite gegen Hackers geschützt ist|
 <
 
 # 4.2 Testfälle
