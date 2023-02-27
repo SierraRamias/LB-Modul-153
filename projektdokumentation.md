@@ -44,7 +44,7 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 | 4    |     Muss        |   Qualitative  | Als Admin möchte ich einzelne Einträge der Highscore-Liste löschen können, damit ich evt. unverdiente Highscores löschen kann |
 | 5    |     Kann        |   Rand         | Als benutzer möchte ich dass das Spiel auf einem Webbrowser ist, damit er einfach zugreifbar ist als Benutzer |
 | 6    |     Kann        |   Rand         | Als Benutzer möchte ich meinen Namen eingeben können, damit er später auf der Highscoreliste angezeigt werden kann |
-| 7    |     Kann        |   Rand         | Als Benutzer möchte ich zur jeder Zeit meinen Kontostand sehen, damit ich eifnacher entscheiden kann, wann ich mich in die Highscoreliste Eintragen lassen möchte |
+| 7    |     Kann        |   Rand         | Als Benutzer möchte ich zur jeder Zeit meinen Kontostand sehen, damit ich einfacher entscheiden kann, wann ich mich in die Highscoreliste Eintragen lassen möchte |
 | 8    |     Kann        |   Rand         | Als Benutzer möchte ich zu jeder Zeit meine Lebenspunkte sehen können, damit ich weiss wie oft ich noch falsch raten kann  |
 | 9    |     Kann        |   Rand         | Als Benutzer möchte ich dass es mir angezeigt wird ob mein geratener Buchstabe richtig oder falsch ist, damit ich sehen kann ob ich richtig oder falsch war |
 | 10   |     Kann        |   Rand         | Als Benutzer möchte ich das auf der Highscoreliste Rang, Name, Zeitpunkt des Spieles, Geldetrag und die Anzahl an spielrunden sind, damit ausführlich angezeigt wird, wie gut man wat |
@@ -63,22 +63,37 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 
 | TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  |  Das Spiel muss gestartet sein und der Tester ist auf der Glücksrad Seite   | Man drückt auf "Rad drehen" |  Das Rad dreht sich und man sieht mit welchen Betrag man spielt |
-| 2.1  |  Das Spiel ist gestartet   |         |                   |
-| 3.1  |              |         |                   |
-| 4.1  |              |         |                   |
-| 5.1  |              |         |                   |
-| 6.1  |              |         |                   |
-
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
+| 1.1  |  Man ist auf der Startseite | Man gibt das Admin Login ein(admin und adminpassword) |  Man kommt auf die Adminseite|
+| 2.1  |  Man ist auf der Adminseite  |    Man drückt bei einer Phrase auf Phrase editieren, editiert diese und drückt dann Enter |   Die Phrase ist in editierter Version da  |
+| 2.2  |  Man ist auf der Adminseite  |    Man drückt bei einer Phrase auf Phrase Löschen|   Die Phrase ist gelöscht und wird nicht mehr angezeigt|
+| 2.3  |  Man ist auf der Adminseite  |    Man drückt bei einer Phrase auf Phrase hinzufügen, gibt diese ein und drückt enter |   Die Phrase wird nun angezeigt  |
+| 3.1  |  Man ist auf der Adminseite   |  Man gibt bei Kategorie eine Kategorie ein und drückt Kategorie hinzufügen  |  die neue Kategorie wird nun angezeigt  |
+| 3.2  |Man ist auf der Adminseite   |  Man drückt bei den Phrasen auf zu Kategorie hinzufügen | Bei der Phrase steht nun das es zu dieser Kategorie gehört  |
+| 4.1  | Man ist auf der Adminseite  |    Man drückt bei einer Highscore auf Highscore Löschen|   Der Highscore ist gelöscht und wird nicht mehr angezeigt|
+| 5.1  | Das Spiel ist gestarte |  Siehe vo das spiel gestartet ist | Es ist auf einem Webbrowser gestartet |
+| 6.1  | Man hat sich als Benutzer eingeloggt und ist auf der Namenseingabe Seite | Man gibt einen Namen ein und drückt auf submit | Der Name wird nun beim Begrüssungtext auf der Spielseite angezeigt |
+| 7.1  | Man ist auf der Spielseite | Man spiel ein paar rundenen | Der Betrag wird die ganze zeit aktualisiert und unter "Your amount is:" |
+| 8.1  | Man ist auf der Spielseite | Man spiel ein paar runden, wobei man da mindestens einmal falsch beim ratespiel raten muss | Der Betrag wird die ganze zeit aktualisiert und unter "Your amount of lifes are:" |
+| 9.1  | Man ist auf der Spielseite | Man spiel ein paar runden, wobei man da mindestens einmal falsch beim ratespiel raten muss und einmal richtig | Es wird angezeigt ob es richtig oder falsch ist |
+| 10.1  | Man ist auf der Highscoreseite | Man schaut welche angaben zu den Score angezeigt werden | Es soll der name die anzahl Versüche, den Betrag und den Zeitpunkt der Spieles angezeigt werden |
+| 11.1  | Man ist auf der Highscoreseite | Man schaut wie die Highscoreliste Sortiert ist | Es soll dem Betrag aufsteigen sortiert sein |
+| 12.1  | Man ist auf der Spielseite | Man errät die Phrasen mindestens einmal | Es kommt eine andere Phrase |
+| 13.1  | Man ist auf der Spielseite | Man Schaut welche auswahl man hat an buttons | Es gibt Buttons die einem ermöglichen zu spielen, und es gibt Buttons um den Highscore einzutragen und aufhören zu spielen |
+| 14.1  | Man ist auf der Spielseite | Man errät die Phrase mindesten einmal | Nachdem man die Phrase erraten hat, kommt eine andere |
+| 15.1  | Man ist auf der Spielseite | Man Spielt ein paar rundenen und submitten dann seinen Highscore | Auf der Highscoreliste sind die Anzahl an Versüche angezeigt  |
+| 16.1  | Man ist auf der Spielseite | Man gibt beim raten etwas anderes als nur einen buchstaben ein | Es gibt eine Fehlermeldung und man muss noch einmal raten  |
+| 17.1  | Man hat zugriff auf den Quellcode | Man Schaut sich den JDBCScoreDao an | Der JDBCScoreDao wurde im JDBC format programmiert |
+| 18.1  | Man hat zugriff auf den Quellcode | Man Schaut sich den wie die Seite auf die Datenbank zugreifft an | Die Methode die von der Webseite aufgerufen wird greift nicht direkt auf die Datenbank ein, sondern ruft eine Methode im JDBCScoreDao auf |
+| 19.1  | Man hat zugriff auf den Quellcode | Man schaut beim Gamestart.xhtml | Beim Inputtext für den Namen ist required |
 
 # 5 Prototyp
+Admin Seite
+[Alt text](file:///adminsite.png)
 
-✍️ Erstellen Sie Prototypen für das GUI (Admin-Interface und Quiz-Seite).
-
+Game Seite
+![Alt text](file:///game%20site.png)
 # 6 Implementation
 
-✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
 
 | User Story | Datum | Beschreibung |
 | ---------- | ----- | ------------ |
