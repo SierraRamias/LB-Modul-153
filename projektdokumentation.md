@@ -88,7 +88,8 @@ Als Datenkbank benutze ich Daos, die die Datenbanken bedienen.
 
 # 5 Prototyp
 Admin Seite
-[Alt text](file:///adminsite.png)
+![game site](https://user-images.githubusercontent.com/40291776/221521702-9157652e-a6fa-46c8-be41-f5388f1fe269.png)
+
 
 Game Seite
 ![Alt text](file:///game%20site.png)
