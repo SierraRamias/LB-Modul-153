@@ -118,26 +118,44 @@ Game Seite
 
 | US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
 | ---- | --------- | ----------------------------------------- |
-| 1    | ja  |    if (username.equals("admin") && password.equals("adminpassword")) {
+| 1    | ja  |   
+````
+if (username.equals("admin") && password.equals("adminpassword")) {
             session.setAttribute("isAdmin", true);
             return "/AdminSite.xhtml";
         } else {
             FacesMessage message = new FacesMessage("Invalid credentials.");
             context.addMessage(null, message);
             return null;
-        }                                       |
+        }
+````
+|
 | 2    | nein |                                           |
 | 3    | nein |                                           |
 | 4    | nein |                                           |
-| 5    | ja  | <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>                                       |
-| 6    | ja |   public String submit() {
+| 5    | ja  | 
+````
+<servlet-class>javax.faces.webapp.FacesServlet</servlet-class> 
+````
+|
+| 6    | ja |   
+````
+public String submit() {
         user = new User(name);
     return "Game.xhtml?faces-redirect=true";
-    }                                        |
-| 7    | ja  |  public int getAmount() {
+    } 
+````
+ |
+| 7    | ja  |  
+````
+public int getAmount() {
         return user.getAmount();
-    }                                         |
-| 8    | ja |     public int getLife() {
+    }
+ ````
+  |
+| 8    | ja |     
+````
+public int getLife() {
         return life;
     }
     public void loseLife() {
@@ -152,8 +170,12 @@ Game Seite
             }
         }
 
-    }                                      |
-| 9    | ja |       if (found) {
+    }
+```` 
+   |
+| 9    | ja |      
+````
+if (found) {
                 message = "Good guess!";
             } else {
                 loseLife();
@@ -161,10 +183,18 @@ Game Seite
             }
         } else {
             message = "Please enter a single letter.";
-        }                                    |
-| 11   | ja  |     Score score = new Score(name, amount, tries, date);                                      |
+        }
+  ````
+|
+| 11   | ja  |    
+````
+Score score = new Score(name, amount, tries, date);
+````
+|
 | 12   | nein |                                           |
-| 13   | ja |        public void submitHighscore() throws NamingException {
+| 13   | ja |        
+````
+public void submitHighscore() throws NamingException {
 
         // create an instance of the JdbcScoreDao class
         JdbcScoreDao scoreDao = new JdbcScoreDao(MyDataSourceFactory.getDataSource());
@@ -183,17 +213,29 @@ Game Seite
         } catch (IOException e) {
             // Handle the exception
         }
-    }                                   |
-| 14   | ja  |    String[] sentences = {
+    } 
+````
+|
+| 14   | ja  |    
+````
+String[] sentences = {
             "an apple a day keeps the doctor away",
             "good things come to those who wait",
             "better late than never",
             "a blessing in disguise"
-        };                                       |
-| 15   | ja  |        public void spinWheel() {
-        user.addTries();                                   |
+        };  
+````   
+|
+| 15   | ja  |       
+````
+public void spinWheel() {
+        user.addTries();
+````
+|
 | 16   | nein |                                           |
-| 17   | ja  |    public JdbcScoreDao(DataSource dataSource) {
+| 17   | ja  |    
+````
+public JdbcScoreDao(DataSource dataSource) {
     this.dataSource = dataSource;
   }
   @Override
@@ -233,8 +275,12 @@ Game Seite
       // handle exception
     }
     return highscores;
-  }                                       |
-| 18   | ja  |     public void submitHighscore() throws NamingException {
+  } 
+  ````
+ |
+| 18   | ja  |
+````
+public void submitHighscore() throws NamingException {
 
         // create an instance of the JdbcScoreDao class
         JdbcScoreDao scoreDao = new JdbcScoreDao(MyDataSourceFactory.getDataSource());
@@ -253,9 +299,14 @@ Game Seite
         } catch (IOException e) {
             // Handle the exception
         }
-    }                                      |
-| 19   | ja  |                  <h:inputText id="name" value="#{gameBean.name}" required ="true" />
-                                  |
+    } 
+````
+|
+| 19   | ja  |
+````
+<h:inputText id="name" value="#{gameBean.name}" required ="true" />
+ ````
+ |
 
 # 8 Testprotokoll
 
